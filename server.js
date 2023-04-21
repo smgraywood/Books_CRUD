@@ -1,0 +1,1 @@
+DATABASE_URL="mongodb+srv://smgraywood:QbCPHk1cOSnCSIPr@cluster0.qztwt78.mongodb.net/stacks?retryWrites=true&w=majority"
