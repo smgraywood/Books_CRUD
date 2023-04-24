@@ -1,5 +1,5 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const stacksController = require('../controllers/stacks');
+const stacksController = require("../controllers/stacks");
 
 module.exports = router;
