@@ -1,1 +1,0 @@
-const Stack = require('../models/stack');
