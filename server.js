@@ -15,7 +15,8 @@ require("./config/passport");
 
 const landingRoutes = require("./routes/landing");
 const indexRoutes = require("./routes/index");
-
+const stackRoutes = require("./routes/stacks");
+const bookRoutes = require("./routes/books");
 
 // mount middleware
 app.use(logger("dev"));
@@ -40,6 +41,8 @@ app.use(function (req, res, next) {
 // mount routes
 app.use("/", landingRoutes);
 app.use("/index", indexRoutes);
+app.use("/stacks", stackRoutes);
+app.use("/books", bookRoutes);
 
 // tell app to listen for requests
 app.listen(3000, () => {

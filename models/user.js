@@ -10,6 +10,7 @@ const userSchema = new Schema(
 		},
 		email: String,
 		avatar: String,
+		stacks: [{ type: Schema.Types.ObjectId, ref: "Stacks" }],
 	},
 	{ timestamps: true }
 );
