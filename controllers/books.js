@@ -29,10 +29,10 @@ async function create(req,res) {
 
 async function index(req,res) {
     try{
-        const allBookss = await Book.find({})
+        const allBooks = await Book.find({})
 
         res.render('books/index', {
-            books: allBookss,
+            books: allBooks,
             title: 'All Books'
         });
 
