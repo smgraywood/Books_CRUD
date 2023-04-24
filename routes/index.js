@@ -1,33 +1,11 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const passport = require("passport");
-const indexController = require("../controllers/index");
+// router object created from express.Router
+const indexController = require('../controllers/index');
+// requiring controller functionality from index controller module
 
-router.get("/", indexController.home);
-
-// Google OAuth login route
-router.get(
-	"/auth/google",
-	passport.authenticate("google", {
-		// requesting user's profile & email
-		scope: ["profile", "email"],
-	})
-);
-
-// Google OAuth callback route
-router.get(
-	"/oauth2callback",
-	passport.authenticate("google", {
-		successRedirect: "/",
-		failureRedirect: "/",
-	})
-);
-
-//OAuth logout route
-router.get("/logout", function (req, res) {
-	req.logout(function () {
-		res.redirect("/");
-	});
-});
+router.get('/index', indexController.home);
+// set up home route and map requests to home controller function
 
 module.exports = router;
+// export router object

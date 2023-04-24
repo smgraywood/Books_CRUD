@@ -1,5 +1,5 @@
 function home(req, res) {
-    res.render('index', {title: "Stacks"});
+    res.render('landing', {title: "Stacks"});
 }
 
 module.exports = {
