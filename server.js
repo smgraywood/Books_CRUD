@@ -13,6 +13,8 @@ require("dotenv").config();
 require("./config/database");
 require("./config/passport");
 
+const indexRoutes = require("./routes/index");
+
 // mount middleware
 app.use(logger("dev"));
 app.use(express.static("public"));
@@ -34,6 +36,7 @@ app.use(function (req, res, next) {
 });
 
 // mount routes
+app.use("/", indexRoutes);
 
 // tell app to listen for requests
 app.listen(3000, () => {
