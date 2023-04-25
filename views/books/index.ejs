@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<%- include ('../partials/head') %>
+
+<body>
+
+<%- include('../partials/header') %>
+
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Favorite Quote</th>
+            <th>Rating</th>
+            <th>Review</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% books.forEach(b => { %>
+            <tr>
+                <td>
+                    <%= b.title %>
+                </td>
+                <td>
+                    <%= b.author.join(', ') %>
+                </td>
+                <td>
+                    <%= b.favoriteQuote %>
+                </td>
+                <td>
+                    <%= b.rating %>
+                </td>
+                <td>
+                    <%= b.review %>
+                </td>
+                <td>
+                    <a href="/books/<%= b._id %>">Details</a>
+                </td>
+            </tr>
+       <% }) %>
+    </tbody>
+</table>
+
+<%- include('../partials./footer') %>
+
+</body>
+
+</html>
