@@ -4,6 +4,9 @@ const logger = require("morgan");
 const session = require("express-session");
 const passport = require("passport");
 
+const landingRoutes = require("./routes/landing");
+const indexRoutes = require("./routes/index");
+
 // initialize app
 const app = express();
 
@@ -12,10 +15,6 @@ app.set("view engine", "ejs");
 require("dotenv").config();
 require("./config/database");
 require("./config/passport");
-
-const landingRoutes = require("./routes/landing");
-const indexRoutes = require("./routes/index");
-
 
 // mount middleware
 app.use(logger("dev"));
