@@ -8,6 +8,8 @@ router.get('/new', booksController.new);
 //POST /books - create route
 router.post('/', booksController.create);
 
+router.post('/stacks/:id/books', booksController.addToStack)
+
 //GET /books - index route
 router.get('/', booksController.index);
 
