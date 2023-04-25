@@ -22,7 +22,7 @@ async function create(req, res) {
 async function index(req, res) {
 	try {
 		const stacks = await Stack.find();
-		res.render("index", { stacks: stacks, title: "All Stacks" });
+		res.render("stacks/index", { stacks: stacks, title: "All Stacks" });
 	} catch (error) {
 		console.log(error);
 		res.render("error", { title: "Something Went Wrong" });

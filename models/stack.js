@@ -12,7 +12,6 @@ const bookSchema = new Schema({
 	},
 	genre: {
 		enum: ["Fantasy", "Science Fiction", "Dystopian", "Action & Adventure", "Mystery", "Horror", "Thriller & Suspense", "Historical Fiction", "Romance", "Graphic Novel", "Short Story", "Children", "Memoir & Autobiography", "Biography", "Food & Drink", "Art & Photography", "Self-Help", "History", "Travel", "Religion & Spirituality", "Science & Technology"],
-		required: true,
 	},
 	rating: {
 		type: Number,
