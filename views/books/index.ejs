@@ -9,7 +9,7 @@
 			<div id="stack-container">
 				<div class="book-in-stack" id="book-1"></div>
 				<div class="book-in-stack" id="book-2">
-					<button id="stack-button">ALL THE STACKS</button>
+					<a href="/stacks"><button id="stack-button">ALL THE STACKS</button></a>
 				</div>
 				<div class="book-in-stack" id="book-3"></div>
 			</div>
@@ -22,10 +22,11 @@
 		</section>
 		<div class="shelf"></div>
 
-		<% books.forEach(b => { %> <%=
-		<a href="/books/<%= b._id %>">b.title</a> %> <% }) %>
+		<% books.forEach(b => { %> 
+            <a href="/books/<%= b._id %>"><%=b.title%></a><br>
+        <%}) %>
 
-		<button id="add-book">Add A Book</button>
+		<a href="/books/new"><button id="add-book">Add A Book</button></a>
 
 		<img
 			class="large-plant-all-pages"
@@ -33,6 +34,6 @@
 			alt="a large cartoon monstera plant in a blue pot"
 		/>
 
-		<%- include('../partials./footer') %>
+		<%- include('../partials/footer') %>
 	</body>
 </html>

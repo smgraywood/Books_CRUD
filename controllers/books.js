@@ -1,4 +1,4 @@
-const Book = require('../models/stack')
+const Book = require('../models/book')
 
 function newBook(req,res) {
     res.render('books/new', {
@@ -12,10 +12,9 @@ async function create(req,res) {
             if(req.body[key] === '') delete req.body[key];
         };
 
-        if(req.body.author) {
-            req.body.author = req.body.cast.trim();
-            req.body.author = req.body.author.split(/\s*,\s*/);
-        }
+        // if(req.body.author) {
+        //     // req.body.author = req.body.author.trim().split(/\s*,\s*/);
+        // }
 
         await Book.create(req.body);
 
@@ -46,7 +45,7 @@ async function show(req, res) {
     try {
         const foundBook = await Book.findById(req.params.id);
         res.render('books/show', {
-            movie: foundBook,
+            book: foundBook,
             title: 'See Book Details'
         });
     } catch (error) {
