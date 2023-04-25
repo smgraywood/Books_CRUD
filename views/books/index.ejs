@@ -1,44 +1,38 @@
 <!DOCTYPE html>
 <html>
+	<%- include ('../partials/head') %>
 
-<%- include ('../partials/head') %>
+	<body>
+		<%- include ('../partials/header') %>
 
-<body>
-    <%- include ('../partials/header') %>
+		<section class="books-on-shelf">
+			<div id="stack-container">
+				<div class="book-in-stack" id="book-1"></div>
+				<div class="book-in-stack" id="book-2">
+					<button id="stack-button">ALL THE STACKS</button>
+				</div>
+				<div class="book-in-stack" id="book-3"></div>
+			</div>
 
-    <section class="books-on-shelf">
-        <div id="stack-container">
-            <div class="book-in-stack" id="book-1"></div>
-            <div class="book-in-stack" id="book-2">
-                <button id="stack-button"> ALL THE STACKS </button>
-            </div>
-            <div class="book-in-stack" id="book-3"></div>
-        </div>
+			<img
+				src="images/small-plant.png"
+				alt="a small cartoon pothos plant in a brown pot"
+				id="small-plant"
+			/>
+		</section>
+		<div class="shelf"></div>
 
-    <img
-        src="images/small-plant.png"
-        alt="a small cartoon pothos plant in a brown pot"
-        id="small-plant"
-    />
-    </section>
-        <div class="shelf"></div>
+		<% books.forEach(b => { %> <%=
+		<a href="/books/<%= b._id %>">b.title</a> %> <% }) %>
 
-    <% books.forEach(b => { %>
-           
-        <%= <a href="/books/<%= b._id %>">b.title</a> %>
-               
-    <% }) %>
-  
-    <button id="add-book"> Add A Book </button>
+		<button id="add-book">Add A Book</button>
 
-    <img
-            class="large-plant-all-pages"
+		<img
+			class="large-plant-all-pages"
 			src="images/large-plant.png"
 			alt="a large cartoon monstera plant in a blue pot"
 		/>
 
-<%- include('../partials./footer') %>
-
-</body>
-
+		<%- include('../partials./footer') %>
+	</body>
 </html>

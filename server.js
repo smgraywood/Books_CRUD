@@ -7,16 +7,15 @@ const passport = require("passport");
 // initialize app
 const app = express();
 
+const landingRoutes = require("./routes/landing");
+const stackRoutes = require("./routes/stacks");
+const bookRoutes = require("./routes/books");
+
 // configure app settings
 app.set("view engine", "ejs");
 require("dotenv").config();
 require("./config/database");
 require("./config/passport");
-
-const landingRoutes = require("./routes/landing");
-const indexRoutes = require("./routes/index");
-const stackRoutes = require("./routes/stacks");
-const bookRoutes = require("./routes/books");
 
 // mount middleware
 app.use(logger("dev"));
@@ -40,7 +39,6 @@ app.use(function (req, res, next) {
 
 // mount routes
 app.use("/", landingRoutes);
-app.use("/index", indexRoutes);
 app.use("/stacks", stackRoutes);
 app.use("/books", bookRoutes);
 
