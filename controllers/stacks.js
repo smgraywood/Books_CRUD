@@ -1,16 +1,12 @@
 const Stack = require("../models/stack");
 
 function newStack(req, res) {
-	res.render("stacks/new", { title: "Enter a New Movie" });
+	res.render("stacks/new", { title: "Enter a New Stack" });
 }
 
 async function create(req, res) {
 	try {
 		// delete empty fields from req.body
-		for (let key in req.body) {
-			if (req.body[key] === "") delete req.body[key];
-		}
-
 		await Stack.create(req.body);
 		res.redirect("/stacks");
 	} catch (error) {

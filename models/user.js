@@ -11,6 +11,7 @@ const userSchema = new Schema(
 		email: String,
 		avatar: String,
 		stacks: [{ type: Schema.Types.ObjectId, ref: "Stacks" }],
+		books: [{ type: Schema.Types.ObjectId, ref: "Books" }],
 	},
 	{ timestamps: true }
 );
