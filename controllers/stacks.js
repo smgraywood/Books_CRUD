@@ -1,4 +1,5 @@
 const Stack = require("../models/stack");
+const Book = require("../models/book")
 
 function newStack(req, res) {
 	res.render("stacks/new", { title: "Enter a New Stack" });
@@ -28,9 +29,11 @@ async function index(req, res) {
 async function show(req, res) {
 	try {
 		const foundStack = await Stack.findById(req.params.id);
+		const books = await Book.find()
 		res.render("stacks/show", {
-			stacks: foundStack,
+			stack: foundStack,
 			title: "See Stack Details",
+			books: books,
 		});
 	} catch (error) {
 		console.log(error);
