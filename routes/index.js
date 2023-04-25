@@ -4,7 +4,7 @@ const router = express.Router();
 const indexController = require('../controllers/index');
 // requiring controller functionality from index controller module
 
-router.get('/index', indexController.home);
+router.get('/', indexController.home);
 // set up home route and map requests to home controller function
 
 module.exports = router;
