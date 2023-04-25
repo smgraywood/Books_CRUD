@@ -10,7 +10,10 @@ const bookSchema = new Schema({
 		type: String,
 		required: true,
 	},
-	favoriteQuote: [String],
+	genre: {
+		enum: ["Fantasy", "Science Fiction", "Dystopian", "Action & Adventure", "Mystery", "Horror", "Thriller & Suspense", "Historical Fiction", "Romance", "Graphic Novel", "Short Story", "Children", "Memoir & Autobiography", "Biography", "Food & Drink", "Art & Photography", "Self-Help", "History", "Travel", "Religion & Spirituality", "Science & Technology"],
+		required: true,
+	},
 	rating: {
 		type: Number,
 		min: 1,
@@ -18,6 +21,7 @@ const bookSchema = new Schema({
 		default: 5,
 	},
 	review: [String],
+	favoriteQuote: [String],
 });
 
 const stackSchema = new Schema(
