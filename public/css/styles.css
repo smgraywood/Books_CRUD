@@ -207,12 +207,13 @@ a{
 	color: #f4c650;
 }
 
-footer {
-	position: sticky;
-	top: 95%;
-    margin-left: 5vmin;
-	color: #f4c650;
-	font-family: "Oswald", sans-serif;
+#book-list-button{
+    background-color: #f4c650;
+    color: #fff;
+    border: solid 1px #f4c650;
+    font-family: "Oswald", sans-serif;
+    font-size: 2.5vmin;
+    margin-top: 1vmin;
 }
 
 .form-container{
@@ -279,4 +280,120 @@ th, td{
 	background-color: #fff;
 	color: #f4c650;
     border: 1px #000 solid;
+}
+
+footer {
+	position: sticky;
+	top: 95%;
+    margin-left: 5vmin;
+	color: #f4c650;
+	font-family: "Oswald", sans-serif;
+}
+
+
+@media screen and (max-width: 850px) {
+    .logo{
+        height: 25vmin;
+    }
+    #logout{
+        font-size: 2vmin;
+        margin-left: 1vmin;
+        display: flex;
+        opacity: 0.8;
+        transition-duration: 0.6s;
+        height: 7vmin;
+        font-size: 4vmin;
+    }
+
+    #logo-logout-container{
+        margin-bottom: 15vmin;
+    }
+
+    #landing-page-plant{
+            position: relative;
+            margin-top: 15vmin;
+    }
+    #login-button{
+        margin-top: -15vmin;
+        border: solid 5px #f4c650;
+        width: 40vmin;
+        height: 20vmin;
+        font-size: 15vmin;
+    }
+
+    #stack-button{
+        font-size: 1.5vmin;
+    }
+
+    #small-plant {
+        height: 25vmin;
+        margin-bottom: -3vmin;
+    }
+
+    .books-on-shelf{
+        width: 70vmin;
+    }
+    
+    .book-in-stack{
+        width: 20vmin;
+        height: 6vmin;
+        background-color: #F4C650;
+        border: solid black .5vmin;
+    }
+
+    #stack-button{
+        font-size: 3vmin;
+        padding:0;
+    }
+
+    .large-plant-all-pages {
+        height: 70vmin;
+    }
+
+    #book-list{
+        font-size: 5vmin;
+    }
+
+    #book-list-button{
+        background-color: #f4c650;
+        color: #fff;
+        border: solid 1px #f4c650;
+        font-family: "Oswald", sans-serif;
+        font-size: 7vmin;
+    }
+
+    .form-container{
+        width:80vmin;
+    }
+    .add-form{
+        width:auto;
+    }
+    table{
+        width:70vmin;
+    }
+
+    .add-new-button{
+        background-color:#fff;
+        color: #f4c650;
+        border: solid 1px #f4c650;
+        font-family: "Oswald", sans-serif;
+        font-size: 7vmin;
+    }
+
+    #stack-anchor{
+        padding:0;    
+    }
+
+    #add-stack-table{
+        width:57vmin
+    }
+
+    footer{
+    position: sticky;
+	top: 100%;
+    margin-left: 5vmin;
+	color: #f4c650;
+	font-family: "Oswald", sans-serif;
+    font-size: 3vmin;
+    }
 }
