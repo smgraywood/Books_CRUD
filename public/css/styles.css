@@ -40,7 +40,7 @@
 }
 
 h2{
-    font-family: 'EB Garamond', serif;
+    font-family: "Oswald", sans-serif;
     font-weight: 500;
     margin-bottom:0;
     text-decoration: underline;
@@ -194,4 +194,56 @@ footer {
     margin-left: 5vmin;
 	color: #f4c650;
 	font-family: "Oswald", sans-serif;
+}
+
+#form-container{
+    background-color: #f4c650;
+    width: 45vmin;
+    margin: 0 auto;
+}
+
+#add-books-title{
+    color: #FFF;
+    text-decoration: none;
+    text-align: center;
+}
+
+#add-book-form{
+    width: 40vmin;    
+    display: flex;
+	margin: 0 auto;
+    padding:1.5vmin;
+}
+
+table, th, td {
+	border: 1px solid;
+	background-color: #fff;
+    font-family: "Oswald", sans-serif;
+}
+
+table{
+    background-color: #000;
+}
+
+th, td{
+    margin:0;
+}
+
+#add-book-button{
+	background-color: #fff;
+	color: #f4c650;
+	border: solid 1px #f4c650;
+	font-family: "Oswald", sans-serif;
+	font-size: 2vmin;
+	opacity: 0.8;
+	transition-duration: 0.6s;
+    border: 1px #000 solid;    
+    margin-left: .5vmin;
+}
+
+#add-book-button:hover{
+    opacity: 1;
+	background-color: #fff;
+	color: #f4c650;
+    border: 1px #000 solid;
 }
