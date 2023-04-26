@@ -27,9 +27,9 @@
 			</div>
 		</section>
 		<div class="shelf"></div>
-		<div id="form-container">
-			<h2 id="add-books-title">Add a New Book to Your Stacks</h2>
-			<form action="/books" method="POST" id="add-book-form">
+		<div class="form-container">
+			<h2 class="add-title">Add a New Book to Your Stacks</h2>
+			<form action="/books" method="POST" class="add-form">
 				<table>
                     <tr>
                         <label>
@@ -91,15 +91,17 @@
                     </tr>
 			    </table>
                 <br>
-                <button id="add-book-button" type="submit">Add Book</button>
+                <button class="add-new-button" type="submit">Add Book</button>
             </form>
 
 		</div>
+        <div id="all-pages-plant-div">
 		<img
 			class="large-plant-all-pages"
 			src="../images/large-plant.png"
 			alt="a large cartoon monstera plant in a blue pot"
 		/>
+        </div>
         <%- include("../partials/footer") %>
 	</body>
 </html>
