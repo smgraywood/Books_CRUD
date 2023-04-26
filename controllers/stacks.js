@@ -64,6 +64,10 @@ async function deleteBook(req, res) {
 	res.redirect(`/stacks/${stack._id}`);
 }
 
+function editStack(req, res) {
+	res.render(`/stacks/${req.params.id}`, { title: "Edit Stack Name" });
+}
+
 module.exports = {
 	new: newStack,
 	create,
@@ -72,4 +76,5 @@ module.exports = {
 	addToStack,
 	delete: deleteStack,
 	deleteBook,
+	edit: editStack,
 };

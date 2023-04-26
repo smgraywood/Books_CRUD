@@ -23,4 +23,7 @@ router.delete("/:id", stacksController.delete);
 // DELETE /stacks/:id/books - Delete Book from Stack
 router.delete("/:id/books/:bookId", stacksController.deleteBook);
 
+// GET /stacks/:id/edit - Edit Stack Name
+router.get("/:id/edit", stacksController.edit);
+
 module.exports = router;
