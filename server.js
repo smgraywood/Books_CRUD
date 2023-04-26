@@ -1,6 +1,7 @@
 // require dependencies
 const express = require("express");
 const logger = require("morgan");
+const methodOverride = require("method-override");
 const session = require("express-session");
 const passport = require("passport");
 
@@ -19,6 +20,7 @@ require("./config/passport");
 
 // mount middleware
 app.use(logger("dev"));
+app.use(methodOverride("_method"));
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 app.use(

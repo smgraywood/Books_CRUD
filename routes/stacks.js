@@ -17,4 +17,7 @@ router.get("/:id", stacksController.show);
 // POST /stacks/:id/books - Add book to stack
 router.post("/:id/books", stacksController.addToStack);
 
+// DELETE /stacks/:id
+router.delete("/:id", stacksController.delete);
+
 module.exports = router;

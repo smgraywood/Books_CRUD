@@ -51,10 +51,16 @@ async function addToStack(req, res) {
 	res.redirect(`/stacks/${stack._id}`);
 }
 
+async function deleteStack(req, res) {
+	await Stack.deleteOne({ _id: req.params.id });
+	res.redirect("/stacks");
+}
+
 module.exports = {
 	new: newStack,
 	create,
 	index,
 	show,
 	addToStack,
+	delete: deleteStack,
 };
