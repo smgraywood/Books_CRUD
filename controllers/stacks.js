@@ -56,6 +56,14 @@ async function deleteStack(req, res) {
 	res.redirect("/stacks");
 }
 
+async function deleteBook(req, res) {
+	const stack = await Stack.findById(req.params.id);
+	const idx = stack.books.findIndex((book) => book === req.params.bookId);
+	stack.books.splice(idx, 1);
+	await stack.save();
+	res.redirect(`/stacks/${stack._id}`);
+}
+
 module.exports = {
 	new: newStack,
 	create,
@@ -63,4 +71,5 @@ module.exports = {
 	show,
 	addToStack,
 	delete: deleteStack,
+	deleteBook,
 };

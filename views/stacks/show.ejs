@@ -37,6 +37,9 @@
             <%  if(stack.books){ %>
                 <% stack.books.forEach(book => { %>
                     <li><a href="/books/<%= book._id %>"><%= book.title %></a></li>
+                    <form action="/stacks/<%= stack._id %>/books/<%= book._id %>?_method=DELETE" method="POST">
+                        <button>Delete</button>
+                    </form>
                 <% }) %>
                 <% }else {%>
                 ADD SOME BOOKS TO YOUR STACK!
