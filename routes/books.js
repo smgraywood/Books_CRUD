@@ -1,19 +1,17 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const booksController = require('../controllers/books');
+const booksController = require("../controllers/books");
 
 //GET /books/new - new book route
-router.get('/new', booksController.new);
+router.get("/new", booksController.new);
 
 //POST /books - create route
-router.post('/', booksController.create);
-
-router.post('/stacks/:id/books', booksController.addToStack)
+router.post("/", booksController.create);
 
 //GET /books - index route
-router.get('/', booksController.index);
+router.get("/", booksController.index);
 
 //GET /books/:id - show route, must go last
-router.get('/:id', booksController.show);
+router.get("/:id", booksController.show);
 
 module.exports = router;

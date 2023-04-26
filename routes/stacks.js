@@ -14,4 +14,7 @@ router.post("/", stacksController.create);
 // GET /stacks/:id - Show Route
 router.get("/:id", stacksController.show);
 
+// POST /stacks/:id/books - Add book to stack
+router.post("/:id/books", stacksController.addToStack);
+
 module.exports = router;

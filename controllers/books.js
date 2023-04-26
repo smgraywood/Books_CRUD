@@ -53,17 +53,9 @@ async function show(req, res) {
 	}
 }
 
-async function addToStack(req, res) {
-	const stack = await Stack.findById(req.params.id);
-	stack.books.push(req.body.bookId);
-	await stack.save();
-	res.redirect(`/stacks/${stack._id}`);
-}
-
 module.exports = {
 	new: newBook,
 	create,
 	index,
 	show,
-    addToStack,
 };
