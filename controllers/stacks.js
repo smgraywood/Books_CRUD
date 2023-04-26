@@ -28,10 +28,11 @@ async function index(req, res) {
 
 async function show(req, res) {
 	try {
-		const foundStack = await Stack.findById(req.params.id).populate(
-			"books"
+		const foundStack = await Stack.findById(req.params.id).populate("books");
+		// books will be filtered to only show those which are not already in stack
+		const books = await Book.find({ _id: { $nin: foundStack.books } }).sort(
+			"title"
 		);
-		const books = await Book.find();
 		res.render("stacks/show", {
 			stack: foundStack,
 			title: "See Stack Details",
@@ -43,9 +44,17 @@ async function show(req, res) {
 	}
 }
 
+async function addToStack(req, res) {
+	const stack = await Stack.findById(req.params.id);
+	stack.books.push(req.body.bookId);
+	await stack.save();
+	res.redirect(`/stacks/${stack._id}`);
+}
+
 module.exports = {
 	new: newStack,
 	create,
 	index,
 	show,
+	addToStack,
 };

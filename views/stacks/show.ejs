@@ -30,7 +30,6 @@
     <button>Delete</button>
 
     <div>
-        <%# forEach loop within div will need adjustment %>
         <ul>
             <%  if(stack.books){ %>
                 <% stack.books.forEach(book => { %>
@@ -41,7 +40,7 @@
                 <% } %>
         </ul>
         
-        <form action="/stacks/<%=stack._id %>/books" method="POST">
+        <form action="/stacks/<%= stack._id %>/books" method="POST">
             <select name="bookId">
                 <%- books.map(b => `<option value="${b._id}"> ${b.title}</option>`) %>
             </select>
