@@ -1,5 +1,6 @@
 const Stack = require("../models/stack");
 const Book = require("../models/book");
+const User = require("../models/user");
 
 function newStack(req, res) {
 	res.render("stacks/new", { title: "Enter a New Stack" });
@@ -7,8 +8,10 @@ function newStack(req, res) {
 
 async function create(req, res) {
 	try {
-		// delete empty fields from req.body
-		await Stack.create(req.body);
+		const newStack = await Stack.create(req.body);
+		const user = await User.findById(req.user._id);
+		user.stacks.push(newStack._id);
+		await user.save();
 		res.redirect("/stacks");
 	} catch (error) {
 		console.log(error);
@@ -18,7 +21,8 @@ async function create(req, res) {
 
 async function index(req, res) {
 	try {
-		const stacks = await Stack.find();
+		const user = await User.findById(req.user._id);
+		const stacks = await Stack.find({ _id: { $in: user.stacks } });
 		res.render("stacks/index", { stacks: stacks, title: "All Stacks" });
 	} catch (error) {
 		console.log(error);

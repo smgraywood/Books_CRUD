@@ -1,31 +1,36 @@
 const express = require("express");
 const router = express.Router();
 const stacksController = require("../controllers/stacks");
+const ensureLoggedIn = require("../config/ensureLoggedIn");
 
 // GET /stacks - Index Route
-router.get("/", stacksController.index);
+router.get("/", ensureLoggedIn, stacksController.index);
 
 // GET /stacks/new - New Stack Route
-router.get("/new", stacksController.new);
+router.get("/new", ensureLoggedIn, stacksController.new);
 
 // POST /stacks - Create Route
-router.post("/", stacksController.create);
+router.post("/", ensureLoggedIn, stacksController.create);
 
 // GET /stacks/:id - Show Route
-router.get("/:id", stacksController.show);
+router.get("/:id", ensureLoggedIn, stacksController.show);
 
 // POST /stacks/:id/books - Add book to stack
-router.post("/:id/books", stacksController.addToStack);
+router.post("/:id/books", ensureLoggedIn, stacksController.addToStack);
 
 // DELETE /stacks/:id - Delete Stack
-router.delete("/:id", stacksController.delete);
+router.delete("/:id", ensureLoggedIn, stacksController.delete);
 
 // DELETE /stacks/:id/books - Delete Book from Stack
-router.delete("/:id/books/:bookId", stacksController.deleteBook);
+router.delete(
+	"/:id/books/:bookId",
+	ensureLoggedIn,
+	stacksController.deleteBook
+);
 
 // GET /stacks/:id/edit - Edit Stack Name
-router.get("/:id/edit", stacksController.edit);
+router.get("/:id/edit", ensureLoggedIn, stacksController.edit);
 
-router.post("/:id", stacksController.updateStack);
+router.post("/:id", ensureLoggedIn, stacksController.updateStack);
 
 module.exports = router;
