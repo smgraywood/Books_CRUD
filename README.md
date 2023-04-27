@@ -31,6 +31,8 @@ A Spotify-inspired book app which allows you to create Stacks (playlists) of you
 Each book holds details such as the title, author, genre, rating, review, and a favorite quote. 
 Stacks can be modified as users see fit. Users have the ability to add books from their library to different stacks, change the names of those stacks, and delete the stacks altogether. All of this is customized to the user via the use of Google OAuth and PassportJS.
 
+Check out our [Presentation](https://docs.google.com/presentation/d/1NeIxrAuaa4sYE5ZvI_9lhumE2oYPBp1FKOTACQNh_E4/edit#slide=id.g23b091f4458_0_0)
+
 
 ### Built With
 
@@ -44,7 +46,16 @@ Stacks can be modified as users see fit. Users have the ability to add books fro
 
 
 ### Designed With
-#### [Figma](https://www.figma.com/file/PvWDyWcyyTht9QToGJGYba/Stacks?node-id=0-1&t=p5QoWEVzUcMdAmsc-0) <br> ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) <br>
+#### [Figma](https://www.figma.com/file/PvWDyWcyyTht9QToGJGYba/Stacks?node-id=0-1&t=p5QoWEVzUcMdAmsc-0)<br> ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) <br>
+AND <br> 
+#### [Figjam (Schema)](https://www.figma.com/file/DypTqYe1AtbUfHDXhpheBj/Stacks---Schemas?type=whiteboard&node-id=8-3&t=HgFtAwWtDqaNB5Va-0) <br> 
+#### [Figjam (ERD)](https://www.figma.com/file/wdij4KaISVI5NAI6TduLRf/ERD?type=whiteboard&node-id=0-1&t=HgFtAwWtDqaNB5Va-0)
+
+
+<div id="title-container">
+<img src="public/images/README_images/schema.png" alt="image of the user, book, and stack schemas" style="width: 40%;display: grid;float: right">
+<img src="public/images/README_images/erd.png" alt="image of the relationships between the different schema" style="width: 40%;display: grid;float: left">
+</div>
 
 
 ### Planned With
