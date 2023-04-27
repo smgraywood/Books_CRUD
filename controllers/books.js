@@ -65,7 +65,11 @@ async function updateBook(req, res) {
 	//find book that needs to be updated
 	const book = await Book.findById(req.params.id);
 	//apply updates to book
-	book.name = req.body.name;
+	book.title = req.body.title;
+	book.author = req.body.author;
+	book.genre = req.body.genre;
+	book.rating = req.body.rating;
+	book.review = req.body.review;
 	//save book via Mongoose
 	await book.save();
 	//render updated book's show page

@@ -59,12 +59,15 @@ async function index(req, res) {
 
 async function show(req, res) {
 	try {
+		//find current user
+		const user = await User.findById(req.user._id);
 		//find stack that will be displayed
 		const foundStack = await Stack.findById(req.params.id).populate("books");
-		// books will be filtered to only show those which are not already in stack
-		const books = await Book.find({ _id: { $nin: foundStack.books } }).sort(
-			"title"
-		);
+		// books will be filtered to only show those which are in the user's books
+		// and are not already in stack
+		const books = await Book.find({
+			_id: { $nin: foundStack.books, $in: user.books },
+		}).sort("title");
 		//render stack's show page, passing in the found stack & books which are not already in stack
 		res.render("stacks/show", {
 			stack: foundStack,
