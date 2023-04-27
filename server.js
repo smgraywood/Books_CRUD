@@ -47,7 +47,5 @@ app.use("/stacks", stackRoutes);
 app.use("/books", bookRoutes);
 
 // tell app to listen for requests
-app.listen(3000, () => {
-	console.log("express is listening on port:3000");
-});
 
+app.listen(process.env.PORT || 3000);
