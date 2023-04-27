@@ -27,10 +27,7 @@
     <div class="shelf"></div>
     <h3><%= stack.name %></h3>
 
-    <form action="/stacks/<%= stack._id %>/edit" method="GET">
-        <button type="submit">Update</button>
-    </form>
-    
+    <button><a href="/stacks/<%= stack._id %>/edit">Update</a></button>
 
     <form action="/stacks/<%= stack._id %>?_method=DELETE" method="POST">
         <button type="submit">Delete</button>
