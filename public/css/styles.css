@@ -1,0 +1,715 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+
+.logo {
+	height: 10vmin;
+}
+
+#landing-page-logo {
+	height: 80vmin;
+	width: 80vmin;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	opacity: 0.8;
+	position: relative;
+}
+
+#login-button {
+	background-color: #fff;
+	color: #f4c650;
+	border: solid 10px #f4c650;
+	font-family: "Oswald", sans-serif;
+	width: 30vmin;
+	height: 15vmin;
+	font-size: 10vmin;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	margin-top: 15px;
+	opacity: 0.8;
+	transition-duration: 0.6s;
+}
+
+#login-button:hover {
+	opacity: 1;
+	background-color: #f4c650;
+	color: #fff;
+}
+
+h2{
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    margin-bottom:0;
+    text-decoration: underline;
+}
+
+label{
+    font-family: "Oswald", sans-serif;
+    font-size: 3vmin;
+}
+
+a{
+    text-decoration: none;
+}
+
+input{
+    font-size: 3vmin;
+    font-family: "Oswald", sans-serif;
+}
+
+#logout-anchor{
+    text-decoration: none;
+	color: #f4c650;
+}
+
+#logout-anchor:hover{
+	text-decoration: none;
+	color: #fff;
+}
+
+#stack-anchor{
+	text-decoration: none;
+	color: #fff;    
+}
+
+#landing-page-plant {
+	height: 80vmin;
+	margin-top: -60vmin;
+	position: absolute;
+	top: 115%;
+	left: 90%;
+	transform: translate(-50%, -30%);
+	z-index: 1;
+}
+
+#small-plant {
+	height: 15vmin;
+    margin-bottom: -1.7vmin;
+    margin-top: -2vmin;
+}
+
+#logo-logout-container {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	margin-right: 3vmin;
+}
+
+#logout {
+	background-color: #f4c650;
+	color: #fff;
+	border: solid 1px #f4c650;
+	font-family: "Oswald", sans-serif;
+	font-size: 2vmin;
+	margin-left: 1vmin;
+	display: flex;
+	opacity: 0.8;
+	transition-duration: 0.6s;
+}
+
+#logout:hover {
+	opacity: 1;
+	background-color: #fff;
+	color: #f4c650;
+}
+
+.shelf {
+	background-image: url("/images/wood.jpeg");
+	width: 75vmin;
+	height: 1vmin;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+#all-pages-plant-div{
+    width: 75vmin;
+    display: flex;
+    margin: 0 auto;
+	justify-content: flex-end;
+}
+
+.large-plant-all-pages {
+	height: 40vmin;
+    margin-left: 10vmin;
+    display: flex;
+    flex-direction: row;
+}
+
+.books-on-shelf{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60vmin;
+    margin: 0 auto;
+    margin-top:1vmin;
+}
+
+#books-on-shelf-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 40vmin;
+    margin: 0 auto;
+    margin-top:1vmin;
+}
+
+.stack-container {
+	margin-top: 3vmin;
+    margin-bottom: 0;
+}
+.book-in-stack{
+    width: 10vmin;
+	height: 3vmin;
+    background-color: #F4C650;
+    border: solid black .5vmin;
+}
+#book-1 {
+    margin-right: 2vmin;
+}
+
+#book-2 {
+    margin-left:2vmin;
+}
+
+#book-3 {
+    margin-right: 2vmin;
+}
+#stack-button{
+    background-color: transparent;
+    color: #FFF;
+    font-family: "Oswald", sans-serif;
+    border:none;
+}
+
+#book-list-container{
+    margin-top: 3vmin;
+    width: 75vmin;
+	margin: 0 auto;
+}
+
+#book-list{
+    color: #000;
+    font-family: "Oswald", sans-serif;
+    font-size: 2vmin;
+}
+
+#add-book{
+    background-color: #f4c650;
+	color: #fff;
+	border: solid 1px #f4c650;
+	font-family: "Oswald", sans-serif;
+	font-size: 2vmin;
+	display: flex;
+	opacity: 0.8;
+	transition-duration: 0.6s;
+    margin-left: 0;
+    margin-top: 1.5vmin;
+}
+
+#add-book:hover{
+    opacity: 1;
+	background-color: #fff;
+	color: #f4c650;
+}
+
+#add-table-new{
+    width: 35vmin;
+}
+
+#book-list-button{
+    background-color: #f4c650;
+    color: #fff;
+    border: solid 1px #f4c650;
+    font-family: "Oswald", sans-serif;
+    font-size: 2.5vmin;
+    margin-top: 1vmin;
+}
+
+.form-container{
+    background-color: #f4c650;
+    width: 45vmin;
+    margin: 0 auto;
+    align-items: center;
+    padding:1.5vmin;
+}
+
+.add-title{
+    color: #FFF;
+    text-decoration: none;
+    text-align: center;
+}
+
+.add-form{
+    width: 40vmin;    
+	margin: 0 auto;
+    padding:1.5vmin;
+}
+
+table, th, td {
+	border: 1px solid;
+	background-color: #fff;
+    font-family: "Oswald", sans-serif;
+
+}
+
+table{
+    background-color: #000;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+    width: 25vmin;
+}
+
+#add-stack-table{
+    width: 22.5vmin;
+}
+
+th, td{
+    margin:0;
+}
+
+.add-new-button{
+	background-color: #fff;
+	color: #f4c650;
+	border: solid 1px #f4c650;
+	font-family: "Oswald", sans-serif;
+	font-size: 2vmin;
+	opacity: 0.8;
+	transition-duration: 0.6s;
+    border: 1px #000 solid;    
+    margin-left: .5vmin;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+.add-new-button:hover{
+    opacity: 1;
+	background-color: #fff;
+	color: #f4c650;
+    border: 1px #000 solid;
+}
+
+
+#stack-title-button-container{
+    margin-top: -2vmin;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+#stack-button-forms{
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+    margin-top:-4.5vmin;
+    margin-bottom: 2vmin;
+}
+
+#stack-update-button{
+    background-color: #f4c650;
+    border: 1px #FFF solid;
+    border-radius: 100%;
+    width: 3vmin;
+    height: 3vmin;
+    margin-top:2.5vmin;
+}
+
+#stack-update-image{
+    width: 2vmin;
+    height:2vmin;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+    margin-left:-.25vmin;
+}
+
+#stack-delete-button{
+    background-color: #f4c650;
+    border: 1px #FFF solid;
+    border-radius: 100%;
+    width: 3vmin;
+    height: 3vmin;
+    margin-top:2.5vmin;
+    margin-left:.5vmin;
+}
+
+#stack-delete-image{
+    width: 2vmin;
+    height:2vmin;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+    margin-left:-.25vmin;
+}
+
+#book-title-button-container{
+    display: flex;
+    margin-bottom: -2vmin;
+    margin-top: -2vmin;
+}
+
+#book-delete-button{
+    background-color: #f4c650;
+    border: 1px #FFF solid;
+    border-radius: 100%;
+    width: 2vmin;
+    height: 2vmin;
+    margin-top:0; 
+    margin-top:.5vmin;
+    margin-left: 1vmin;    
+}
+
+#spacing{
+    height: 3vmin;
+}
+
+#book-list{
+    display: inline-block;
+}
+
+#book-delete-image{
+    width: 1.5vmin;
+    height:1.5vmin;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+    margin-left:-.5vmin;
+    
+}
+
+#add-new-book-stack-button{
+    background-color: #f4c650;
+	color: #fff;
+	border: solid 1px #f4c650;
+	font-family: "Oswald", sans-serif;
+	font-size: 2vmin;
+	opacity: 0.8;
+	transition-duration: 0.6s;
+    border: 1px #000 solid;    
+    margin-left: .5vmin;
+}
+
+#add-new-book-stack-button:hover{
+    opacity: 1;
+	background-color: #fff;
+	color: #f4c650;
+    border: 1px #000 solid;
+}
+
+select{
+    font-family: "Oswald", sans-serif;
+}
+
+#title-list-button-container{
+    margin-top: 3vmin;
+    width: 25vmin;
+	margin: 0 auto;
+    background-color: #F4C650;
+    padding: 2vmin;
+}
+
+#stack-name{
+    color: #F4C650;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+    margin-bottom: 2vmin;
+    width:10vmin;
+}
+
+p{
+    color: #FFF;
+	font-family: "Oswald", sans-serif;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+    text-align: center;
+}
+
+#show-book-title{
+    font-size: 4vmin;
+}
+
+#show-update-button{
+	background-color: #fff;
+	color: #f4c650;
+	border: solid 1px #f4c650;
+	font-family: "Oswald", sans-serif;
+	font-size: 2vmin;
+	opacity: 0.8;
+	transition-duration: 0.6s;
+    border: 1px #000 solid;    
+    margin-left: .5vmin;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+#show-update-button:hover{
+    opacity: 1;
+	background-color: #fff;
+	color: #f4c650;
+    border: 1px #000 solid;
+}
+
+
+#edit-book{
+    color: #FFF;
+	font-family: "Oswald", sans-serif;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+    text-align: center;
+    margin-bottom: 2vmin;
+}
+
+
+#edit-header{
+    color: #F4C650;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+    margin-bottom: 2vmin;
+    margin-top: 2vmin;
+}
+
+#edit-form-container{
+    margin-top: 3vmin;
+    width: 35vmin;
+	margin: 0 auto;
+    background-color: #F4C650;
+    padding: 2vmin;
+    align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+    text-align: center;
+    text-align: center;
+}
+
+#edit-label{
+    color: #FFF;
+}
+
+#edit-table{
+    width:35vmin
+}
+
+#footer {
+	position: sticky;
+	top: 95%;
+    margin-left: 5vmin;
+	color: #f4c650;
+	font-family: "Oswald", sans-serif;
+}
+
+@media screen and (max-width: 850px) {
+    .logo{
+        height: 25vmin;
+    }
+
+    #logout{
+        font-size: 2vmin;
+        margin-left: 1vmin;
+        display: flex;
+        opacity: 0.8;
+        transition-duration: 0.6s;
+        height: 7vmin;
+        font-size: 4vmin;
+    }
+
+    #logo-logout-container{
+        margin-bottom: 15vmin;
+    }
+
+    #landing-page-plant{
+            position: relative;
+            margin-top: 15vmin;
+    }
+    #login-button{
+        margin-top: -25vmin;
+        border: solid 5px #f4c650;
+        width: 40vmin;
+        height: 20vmin;
+        font-size: 15vmin;
+    }
+
+    #stack-button{
+        font-size: 1.5vmin;
+    }
+
+    #small-plant {
+        height: 25vmin;
+        margin-bottom: -3vmin;
+    }
+
+    .books-on-shelf{
+        width: 70vmin;
+    }
+    
+    .book-in-stack{
+        width: 20vmin;
+        height: 6vmin;
+        background-color: #F4C650;
+        border: solid black .5vmin;
+    }
+
+    #stack-button{
+        font-size: 3vmin;
+        padding:0;
+    }
+
+    .large-plant-all-pages {
+        height: 70vmin;
+    }
+
+    #book-list{
+        font-size: 5vmin;
+    }
+
+    #book-list-button{
+        background-color: #f4c650;
+        color: #fff;
+        border: solid 1px #f4c650;
+        font-family: "Oswald", sans-serif;
+        font-size: 7vmin;
+    }
+
+    .form-container{
+        width:80vmin;
+        padding:3vmin;
+    }
+    .add-form{
+        width:auto;
+    }
+    table{
+        width:70vmin;
+    }
+
+    .add-new-button{
+        background-color:#fff;
+        color: #f4c650;
+        border: solid 1px #f4c650;
+        font-family: "Oswald", sans-serif;
+        font-size: 7vmin;
+    }
+
+    #add-table-new{
+        width: 60vmin;
+    }
+
+    #stack-anchor{
+        padding:0;    
+    }
+
+    #add-stack-table{
+        width:57vmin
+    }
+
+
+    #stack-update-button{
+        width: 10vmin;
+        height: 10vmin;
+        margin-top:3.5vmin;
+        margin-left:.5vmin;
+    }
+    
+    #stack-update-image{
+        width: 8vmin;
+        height:8vmin;
+        margin-left:-.5vmin;
+    }
+
+    #stack-delete-button{
+        width: 10vmin;
+        height: 10vmin;
+        margin-top:3.5vmin;
+        margin-left:.5vmin;
+    }
+    
+    #stack-delete-image{
+        width: 8vmin;
+        height:8vmin;
+        margin-left:-.5vmin;
+    }
+    
+    #book-delete-button{
+        width: 8vmin;
+        height: 8vmin;
+        margin-top:0; 
+        margin-top:.5vmin;
+        margin-left: 2.5vmin;    
+    }
+
+    #book-delete-image{
+        width: 6vmin;
+        height:6vmin;
+        margin-left:-1vmin;
+    }
+
+    #add-new-book-stack-button{
+        background-color:#f4c650;
+        color: #fff;
+        font-family: "Oswald", sans-serif;
+        font-size: 7vmin;
+    }
+
+    footer{
+        position: sticky;
+        top: 100%;
+        margin-left: 5vmin;
+        color: #f4c650;
+        font-family: "Oswald", sans-serif;
+        font-size: 3vmin;
+    }
+
+    #title-list-button-container{
+        width: 50vmin;
+    }
+
+    #show-book-title{
+        font-size: 8vmin;
+    }
+
+    #show-update-button{
+        font-size: 7vmin;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto; 
+        margin-top: 2vmin;
+    }
+
+    #edit-header{
+        font-size: 6vmin;
+    }
+
+    #edit-label{
+        font-size: 5vmin;
+    }
+
+    #edit-form-container{
+        width: 45vmin;
+    }
+
+    input{
+        font-size: 5vmin;
+        text-align: center;
+    }
+}
