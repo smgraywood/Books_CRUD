@@ -44,7 +44,14 @@ Stacks can be modified as users see fit. Users have the ability to add books fro
 
 
 ### Designed With
-#### [Figma](https://www.figma.com/file/PvWDyWcyyTht9QToGJGYba/Stacks?node-id=0-1&t=p5QoWEVzUcMdAmsc-0) <br> ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) <br>
+#### [Figma](https://www.figma.com/file/PvWDyWcyyTht9QToGJGYba/Stacks?node-id=0-1&t=p5QoWEVzUcMdAmsc-0)<br> ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) <br>
+AND <br> #### [Figjam (Schema)](https://www.figma.com/file/DypTqYe1AtbUfHDXhpheBj/Stacks---Schemas?type=whiteboard&node-id=8-3&t=HgFtAwWtDqaNB5Va-0) <br> #### [Figjam (ERD)](https://www.figma.com/file/wdij4KaISVI5NAI6TduLRf/ERD?type=whiteboard&node-id=0-1&t=HgFtAwWtDqaNB5Va-0)
+
+
+<div id="title-container">
+<img src="public/images/README_images/schema.png" alt="image of the user, book, and stack schemas" style="width: 40%;display: grid;float: right">
+<img src="public/images/README_images/erd.png" alt="image of the relationships between the different schema" style="width: 40%;display: grid;float: left">
+</div>
 
 
 ### Planned With
