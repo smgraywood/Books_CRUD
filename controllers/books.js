@@ -13,10 +13,6 @@ async function create(req, res) {
 			if (req.body[key] === "") delete req.body[key];
 		}
 
-		// if(req.body.author) {
-		//     // req.body.author = req.body.author.trim().split(/\s*,\s*/);
-		// }
-
 		await Book.create(req.body);
 
 		res.redirect("/books");
@@ -40,6 +36,19 @@ async function index(req, res) {
 	}
 }
 
+async function editBook(req, res) {
+    const book = await Book.findById(req.params.id);
+	res.render("books/edit", { title: "Edit Book", book });
+}
+
+async function updateBook(req, res) {
+    const book = await Book.findById(req.params.id);
+    book.name = req.body.name;
+    await book.save();
+    res.redirect(`/books/${book._id}`);
+}
+
+
 async function show(req, res) {
 	try {
 		const foundBook = await Book.findById(req.params.id);
@@ -58,4 +67,6 @@ module.exports = {
 	create,
 	index,
 	show,
+    edit: editBook,
+    updateBook
 };
