@@ -1,24 +1,25 @@
-// require dependencies
+//require dependencies
 const express = require("express");
 const logger = require("morgan");
 const methodOverride = require("method-override");
 const session = require("express-session");
 const passport = require("passport");
 
-// initialize app
+//initialize app
 const app = express();
 
+//require routes
 const landingRoutes = require("./routes/landing");
 const stackRoutes = require("./routes/stacks");
 const bookRoutes = require("./routes/books");
 
-// configure app settings
+//configure app settings
 app.set("view engine", "ejs");
 require("dotenv").config();
 require("./config/database");
 require("./config/passport");
 
-// mount middleware
+//mount middleware
 app.use(logger("dev"));
 app.use(methodOverride("_method"));
 app.use(express.static("public"));

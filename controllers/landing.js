@@ -1,7 +1,8 @@
 function home(req, res) {
-    res.render('landing', {title: "Stacks"});
+	//render landing page, where user can begin login process
+	res.render("landing", { title: "Stacks" });
 }
 
 module.exports = {
-    home
+	home,
 };
