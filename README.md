@@ -1,4 +1,4 @@
-# Go Play! [github.io](//)
+# Check out Stacks! <br> [github.io](//)
 
 
 <!-- TABLE OF CONTENTS -->
@@ -41,8 +41,15 @@ Stacks can be modified as users see fit. Users have the ability to add books fro
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)
-![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
+
+
+### Designed With
+#### [Figma](https://www.figma.com/file/PvWDyWcyyTht9QToGJGYba/Stacks?node-id=0-1&t=p5QoWEVzUcMdAmsc-0) <br> ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) <br>
+
+
+### Planned With
+#### [Trello](https://trello.com/b/XIL9ai1F/stacks) <br> ![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)
+
 
 This is an image of the design process of the game
 <br>
@@ -58,7 +65,7 @@ an image of our Login Screen
 
 ## Installation
  
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clone git@github.com:smgraywood/stacks.git
    ```
