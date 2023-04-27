@@ -46,11 +46,11 @@ Stacks can be modified as users see fit. Users have the ability to add books fro
 
 This is an image of the design process of the game
 <br>
-<img src="images/README_images/figma.png" alt="image of the design for all pages of Stacks">
+<img src="public/images/README_images/figma.png" alt="image of the design for all pages of Stacks">
 
 
 an image of our Login Screen
-<img src="images/README_images/login.png" alt="image of the design for all pages of Stacks">
+<img src="public/images/README_images/login.png" alt="image of the design for all pages of Stacks">
 
 <!-- add mobile and desktop images -->
 
