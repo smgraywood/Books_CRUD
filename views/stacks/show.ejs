@@ -1,66 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head') %>
-<body>
-    <%- include('../partials/header') %>
-    <section class="books-on-shelf">
-        <div id="stack-container">
-            <div class="book-in-stack" id="book-1"></div>
-            <div class="book-in-stack" id="book-2">
-                <button id="stack-button"> <%= stack.name.toUpperCase() %> </button>
-            </div>
-            <div class="book-in-stack" id="book-3"></div>
-        </div>       
-        <img
-            src="../images/small-plant.png"
-            alt="a small cartoon pothos plant in a brown pot"
-            id="small-plant"
-        />
-        <div id="stack-container">
-            <div class="book-in-stack" id="book-1"></div>
-            <div class="book-in-stack" id="book-2">
-                <a href="/stacks"><button id="stack-button">ALL THE STACKS</button></a>
-            </div>
-            <div class="book-in-stack" id="book-3"></div>
-        </div>
-    </section>
-    <div class="shelf"></div>
-    <h3><%= stack.name %></h3>
+	<%- include('../partials/head') %>
+	<body>
+		<%- include('../partials/header') %>
+		<section class="books-on-shelf">
+			<div id="stack-container">
+				<div class="book-in-stack" id="book-1"></div>
+				<div class="book-in-stack" id="book-2">
+					<button id="stack-button">
+						<%= stack.name.toUpperCase() %>
+					</button>
+				</div>
+				<div class="book-in-stack" id="book-3"></div>
+			</div>
+			<img
+				src="../images/small-plant.png"
+				alt="a small cartoon pothos plant in a brown pot"
+				id="small-plant"
+			/>
+			<div id="stack-container">
+				<div class="book-in-stack" id="book-1"></div>
+				<div class="book-in-stack" id="book-2">
+					<a href="/stacks"
+						><button id="stack-button">ALL THE STACKS</button></a
+					>
+				</div>
+				<div class="book-in-stack" id="book-3"></div>
+			</div>
+		</section>
+		<div class="shelf"></div>
+		<div id="stack-title-button-container">
+			<h2><%= stack.name %></h2>
+			<button id="stack-update-button">
+				<a href="/stacks/<%= stack._id %>/edit"
+					><img
+						id="stack-update-image"
+						src="../images/update.png"
+						alt="a white outline of a pencil representing the ability to update the name of the stack"
+				/></a>
+			</button>
 
-    <button><a href="/stacks/<%= stack._id %>/edit">Update</a></button>
+			<form
+				action="/stacks/<%= stack._id %>?_method=DELETE"
+				method="POST"
+			>
+				<button type="submit" id="stack-delete-button">
+					<img
+						id="stack-delete-image"
+						src="../images/delete.png"
+						alt="a white outline of a garbage can representing the ability to delete the stack"
+					/>
+				</button>
+			</form>
+		</div>
+        <div id="spacing"></div>
+		<% if(stack.books){ %> <% stack.books.forEach(book => { %>
+		<div id="book-title-button-container">
+			<a href="/books/<%= book._id %>" id="book-list"
+				><%= book.title %></a
+			>
+			<form
+				action="/stacks/<%= stack._id %>/books/<%= book._id %>?_method=DELETE"
+				method="POST"
+			>
+				<button id="book-delete-button">
+					<img
+						id="book-delete-image"
+						src="../images/delete.png"
+						alt="a white outline of a garbage can representing the ability to delete the stack"
+					/>
+				</button>
+			</form>
+		</div>
+		<br /><br />
+		<% }) %> <% }else {%> ADD SOME BOOKS TO YOUR STACK! <% } %>
 
-    <form action="/stacks/<%= stack._id %>?_method=DELETE" method="POST">
-        <button type="submit">Delete</button>
-    </form>
+		<form action="/stacks/<%= stack._id %>/books" method="POST">
+			<select name="bookId">
+				<%- books.map(b => `
+				<option value="${b._id}">${b.title}</option>
+				`) %>
+			</select>
+			<button type="submit" id="add-new-book-stack-button">Add to Stack</button>
+		</form>
 
-    <div>
-        <ul>
-            <%  if(stack.books){ %>
-                <% stack.books.forEach(book => { %>
-                    <li><a href="/books/<%= book._id %>"><%= book.title %></a></li>
-                    <form action="/stacks/<%= stack._id %>/books/<%= book._id %>?_method=DELETE" method="POST">
-                        <button>Delete</button>
-                    </form>
-                <% }) %>
-                <% }else {%>
-                ADD SOME BOOKS TO YOUR STACK!
-                <% } %>
-        </ul>
-        
-        <form action="/stacks/<%= stack._id %>/books" method="POST">
-            <select name="bookId">
-                <%- books.map(b => `<option value="${b._id}"> ${b.title}</option>`) %>
-            </select>
-            <button type="submit">Add to Stack</button>
-        </form>
-    </div>
-
-    <img
-            class="large-plant-all-pages"
+		<img
+			class="large-plant-all-pages"
 			src="../images/large-plant.png"
 			alt="a large cartoon monstera plant in a blue pot"
 		/>
 
-    <%- include('../partials/footer') %>
-</body>
+		<%- include('../partials/footer') %>
+	</body>
 </html>
