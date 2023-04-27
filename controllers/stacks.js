@@ -64,8 +64,16 @@ async function deleteBook(req, res) {
 	res.redirect(`/stacks/${stack._id}`);
 }
 
-function editStack(req, res) {
-	res.render(`/stacks/${req.params.id}`, { title: "Edit Stack Name" });
+async function editStack(req, res) {
+	const stack = await Stack.findById(req.params.id);
+	res.render("stacks/edit", { title: "Edit Stack Name", stack });
+}
+
+async function updateStack(req, res) {
+	const stack = await Stack.findById(req.params.id);
+	stack.name = req.body.name;
+	await stack.save();
+	res.redirect(`/stacks/${stack._id}`);
 }
 
 module.exports = {
@@ -77,4 +85,5 @@ module.exports = {
 	delete: deleteStack,
 	deleteBook,
 	edit: editStack,
+	updateStack,
 };
