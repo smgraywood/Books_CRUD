@@ -31,6 +31,8 @@ A Spotify-inspired book app which allows you to create Stacks (playlists) of you
 Each book holds details such as the title, author, genre, rating, review, and a favorite quote. 
 Stacks can be modified as users see fit. Users have the ability to add books from their library to different stacks, change the names of those stacks, and delete the stacks altogether. All of this is customized to the user via the use of Google OAuth and PassportJS.
 
+Check out our [Presentation](https://docs.google.com/presentation/d/1NeIxrAuaa4sYE5ZvI_9lhumE2oYPBp1FKOTACQNh_E4/edit#slide=id.g23b091f4458_0_0)
+
 
 ### Built With
 
