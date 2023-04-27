@@ -3,8 +3,20 @@ const Book = require("../models/book");
 const User = require("../models/user");
 
 //renders page to add a stack
-function newStack(req, res) {
-	res.render("stacks/new", { title: "Enter a New Stack" });
+async function newStack(req, res) {
+	//find current user
+	const user = await User.findById(req.user._id);
+	//save length of user's stacks array to a variable
+	const numStacks = user.stacks.length;
+
+	//if a user has under five stacks
+	if (numStacks < 5) {
+		//render page to create a new stack
+		res.render("stacks/new", { title: "Enter a New Stack" });
+	} else {
+		//render an error page
+		res.render("error", { title: "Something Went Wrong" });
+	}
 }
 
 //adds stacks to MongoDB & current user
@@ -81,6 +93,25 @@ async function addToStack(req, res) {
 async function deleteStack(req, res) {
 	//delete stack from MongoDB
 	await Stack.deleteOne({ _id: req.params.id });
+	//find current user
+	const user = await User.findById(req.user._id);
+	//find index of stack that has been deleted
+	const idx = user.stacks.findIndex((stack) => stack === req.params.id);
+	//create a new stack to hold all stacks, except the one that has been deleted
+	//splice could not be used as it overwrites the array & changed the array items object types
+	const newStacks = [];
+	//iterate over user's current stack array
+	for (let i = 0; i < user.stacks.length; i++) {
+		//if the current element's index does not equal the index that needs to be deleted
+		if (i !== idx) {
+			//add current element to new stacks array
+			newStacks.push(user.stacks[i]);
+		}
+	}
+	//change user's stack to the new stacks array
+	user.stacks = newStacks;
+	//save user via Mongoose
+	await user.save();
 	//render stacks index page
 	res.redirect("/stacks");
 }
