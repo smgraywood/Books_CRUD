@@ -26,4 +26,6 @@ router.delete("/:id/books/:bookId", stacksController.deleteBook);
 // GET /stacks/:id/edit - Edit Stack Name
 router.get("/:id/edit", stacksController.edit);
 
+router.post("/:id", stacksController.updateStack);
+
 module.exports = router;
