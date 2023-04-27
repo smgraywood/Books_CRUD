@@ -15,7 +15,7 @@ async function newStack(req, res) {
 		res.render("stacks/new", { title: "Enter a New Stack" });
 	} else {
 		//render an error page
-		res.render("error", { title: "Something Went Wrong" });
+		res.render("addStacksError", { title: "Something Went Wrong" });
 	}
 }
 
