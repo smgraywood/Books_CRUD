@@ -31,6 +31,7 @@ router.delete(
 // GET /stacks/:id/edit - Edit Stack Name
 router.get("/:id/edit", ensureLoggedIn, stacksController.edit);
 
+// POST /stacks/:id - Show Route for updated stack
 router.post("/:id", ensureLoggedIn, stacksController.updateStack);
 
 module.exports = router;

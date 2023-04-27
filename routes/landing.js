@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
 const passport = require("passport");
+const landingController = require("../controllers/landing");
 
-const landingController = require('../controllers/landing');
-
-router.get('/', landingController.home);
+//GET / - landing page where user can begin login process
+router.get("/", landingController.home);
 
 // Google OAuth login route
 router.get(
@@ -19,7 +19,9 @@ router.get(
 router.get(
 	"/oauth2callback",
 	passport.authenticate("google", {
+		//if user logs in, the stacks index page is rendered
 		successRedirect: "/stacks",
+		//if user cannot log in, an error page is rendered
 		failureRedirect: "/error",
 	})
 );
@@ -27,6 +29,7 @@ router.get(
 //OAuth logout route
 router.get("/logout", function (req, res) {
 	req.logout(function () {
+		//upon log out, the landing page renders
 		res.redirect("/");
 	});
 });

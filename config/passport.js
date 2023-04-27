@@ -11,18 +11,19 @@ passport.use(
 		},
 		async function (accessToken, refreshToken, profile, cb) {
 			try {
-				// A user has logged in with OAuth...
+				//a user has logged in with OAuth...
 				let user = await User.findOne({ googleId: profile.id });
-				// If an existing user was found, provide it to passport
+				//if an existing user was found, provide it to passport
 				if (user) return cb(null, user);
 
-				// If it's a new user, we must create it & then provide it to passport
+				//if it's a new user, we must create it & then provide it to passport
 				user = await User.create({
 					name: profile.displayName,
 					googleId: profile.id,
 					email: profile.emails[0].value,
 					avatar: profile.photos[0].value,
 					stacks: [],
+					books: [],
 				});
 				return cb(null, user);
 			} catch (error) {
@@ -32,10 +33,12 @@ passport.use(
 	)
 );
 
+//adds data to the session that will be used to track the user
 passport.serializeUser(function (user, cb) {
 	cb(null, user._id);
 });
 
+//updates req.user object every time a request comes in from a logged in user
 passport.deserializeUser(async function (userId, cb) {
 	cb(null, await User.findById(userId));
 });
