@@ -46,8 +46,18 @@ h2{
     text-decoration: underline;
 }
 
+label{
+    font-family: "Oswald", sans-serif;
+    font-size: 3vmin;
+}
+
 a{
     text-decoration: none;
+}
+
+input{
+    font-size: 3vmin;
+    font-family: "Oswald", sans-serif;
 }
 
 #logout-anchor{
@@ -207,6 +217,10 @@ a{
 	color: #f4c650;
 }
 
+#add-table-new{
+    width: 35vmin;
+}
+
 #book-list-button{
     background-color: #f4c650;
     color: #fff;
@@ -283,13 +297,6 @@ th, td{
     border: 1px #000 solid;
 }
 
-footer {
-	position: sticky;
-	top: 95%;
-    margin-left: 5vmin;
-	color: #f4c650;
-	font-family: "Oswald", sans-serif;
-}
 
 #stack-title-button-container{
     margin-top: -2vmin;
@@ -472,10 +479,51 @@ p{
     margin-bottom: 2vmin;
 }
 
+
+#edit-header{
+    color: #F4C650;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+    margin-bottom: 2vmin;
+    margin-top: 2vmin;
+}
+
+#edit-form-container{
+    margin-top: 3vmin;
+    width: 35vmin;
+	margin: 0 auto;
+    background-color: #F4C650;
+    padding: 2vmin;
+    align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+    text-align: center;
+    text-align: center;
+}
+
+#edit-label{
+    color: #FFF;
+}
+
+#edit-table{
+    width:35vmin
+}
+
+#footer {
+	position: sticky;
+	top: 95%;
+    margin-left: 5vmin;
+	color: #f4c650;
+	font-family: "Oswald", sans-serif;
+}
+
 @media screen and (max-width: 850px) {
     .logo{
         height: 25vmin;
     }
+
     #logout{
         font-size: 2vmin;
         margin-left: 1vmin;
@@ -495,7 +543,7 @@ p{
             margin-top: 15vmin;
     }
     #login-button{
-        margin-top: -15vmin;
+        margin-top: -25vmin;
         border: solid 5px #f4c650;
         width: 40vmin;
         height: 20vmin;
@@ -560,6 +608,10 @@ p{
         border: solid 1px #f4c650;
         font-family: "Oswald", sans-serif;
         font-size: 7vmin;
+    }
+
+    #add-table-new{
+        width: 60vmin;
     }
 
     #stack-anchor{
@@ -642,5 +694,22 @@ p{
         justify-content: center;
         margin: 0 auto; 
         margin-top: 2vmin;
+    }
+
+    #edit-header{
+        font-size: 6vmin;
+    }
+
+    #edit-label{
+        font-size: 5vmin;
+    }
+
+    #edit-form-container{
+        width: 45vmin;
+    }
+
+    input{
+        font-size: 5vmin;
+        text-align: center;
     }
 }
