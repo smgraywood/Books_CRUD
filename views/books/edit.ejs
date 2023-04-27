@@ -38,7 +38,7 @@
 		<div class="form-container">
 			<h2 id="edit-book">Edit Book</h2>
 			<form action="/books/<%= book._id %>" method="POST">
-				<table>
+				<table id="edit-table">
                     <tr>
                         <label>
                             <th>Title</th>
@@ -109,6 +109,8 @@
 			alt="a large cartoon monstera plant in a blue pot"
 		/>
         </div>
-        <%- include("../partials/footer") %>
+        <footer>
+            <p id="footer">Copyright &copy; All Rights Reserved <%= new Date().getFullYear() %> Stacks</p>
+        </footer>
 	</body>
 </html>
