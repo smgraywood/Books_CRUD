@@ -1,4 +1,4 @@
-# Check out Stacks! <br> [github.io](//)
+# Check out Stacks! <br> [stacks.herokuapp.com](https://stacks.herokuapp.com/)
 
 
 <!-- TABLE OF CONTENTS -->
@@ -70,7 +70,10 @@ This is an image of the design process of the game
 an image of our Login Screen
 <img src="public/images/README_images/login.png" alt="image of the design for all pages of Stacks">
 
-<!-- add mobile and desktop images -->
+<div>
+<img src="public/images/README_images/stacks-login-mobile.png" alt="in play mobile responsive screen" style="width: 40%;display: grid;float: right">
+<img src="public/images/README_images/stacks-index-mobile.png" alt="in play mobile responsive screen" style="width: 40%;display: grid;float: left">
+</div>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
