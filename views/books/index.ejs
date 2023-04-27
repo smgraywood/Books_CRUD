@@ -10,7 +10,7 @@
 				<div class="book-in-stack" id="book-1"></div>
 				<div class="book-in-stack" id="book-2">
 					<a href="/stacks" id="stack-anchor"
-						><button id="stack-button">ALL THE STACKS</button></a
+						><button id="stack-button">ALL STACKS</button></a
 					>
 				</div>
 				<div class="book-in-stack" id="book-3"></div>
@@ -24,7 +24,7 @@
 		</section>
 		<div class="shelf"></div>
 		<div id="book-list-container">
-			<h2>ALL THE BOOKS</h2>
+			<h2>ALL BOOKS</h2>
 			<% books.forEach(b => { %>
 			<a id="book-list" href="/books/<%= b._id %>"><%=b.title%></a><br />
 			<%}) %>
