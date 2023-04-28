@@ -9,11 +9,13 @@
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
+        <li><a href="#designed-with">Designed With</a></li>
+        <li><a href="#planned-with">Planned With</a></li>
       </ul>
     </li>
+    <li><a href="#images">Project Images</a></li>
     <li><a href="#installation">Installation</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#contact">Contact</a></li>
     <li><a href="#enhancements">Planned Enhancements</a></li>
   </ol>
 </details>
@@ -62,14 +64,17 @@ AND <br>
 #### [Trello](https://trello.com/b/XIL9ai1F/stacks) <br> ![Trello](https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white)
 
 
-This is an image of the design process of the game
+## Images
+
+This is an image of the design process of our app
 <br>
 <img src="public/images/README_images/figma.png" alt="image of the design for all pages of Stacks">
 
 
-an image of our Login Screen
+an image of our Login screen
 <img src="public/images/README_images/login.png" alt="image of the design for all pages of Stacks">
-
+<br>
+images of our app on mobile
 <div>
 <img src="public/images/README_images/stacks-login-mobile.png" alt="in play mobile responsive screen" style="width: 40%;display: grid;float: right">
 <img src="public/images/README_images/stacks-index-mobile.png" alt="in play mobile responsive screen" style="width: 40%;display: grid;float: left">
@@ -83,7 +88,7 @@ an image of our Login Screen
    ```sh
    git clone git@github.com:smgraywood/stacks.git
    ```
-2. 
+2. Download the required packages
    ```sh
    npm i express ejs morgan passport passport-googleoauth express-session 
    ```
@@ -109,7 +114,7 @@ Don't forget to give the project a star! Thanks again!
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- PLANNED ENHANCEMENTS -->
-## Planned Enhancements
+## Enhancements
 
 - [ ] Interface with Kindle to allow users to access their e-books via the stacks
 - [ ] Search feature for the books list allowing users to search by genre, author, and title
