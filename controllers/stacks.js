@@ -99,20 +99,11 @@ async function deleteStack(req, res) {
 	//find current user
 	const user = await User.findById(req.user._id);
 	//find index of stack that has been deleted
-	const idx = user.stacks.findIndex((stack) => stack === req.params.id);
-	//create a new stack to hold all stacks, except the one that has been deleted
-	//splice could not be used as it overwrites the array & changed the array items object types
-	const newStacks = [];
-	//iterate over user's current stack array
-	for (let i = 0; i < user.stacks.length; i++) {
-		//if the current element's index does not equal the index that needs to be deleted
-		if (i !== idx) {
-			//add current element to new stacks array
-			newStacks.push(user.stacks[i]);
-		}
-	}
-	//change user's stack to the new stacks array
-	user.stacks = newStacks;
+	const idx = user.stacks.findIndex(
+		(stack) => stack.toString() === req.params.id
+	);
+	//delete the stack from the user's stacks
+	user.stacks.splice(idx, 1);
 	//save user via Mongoose
 	await user.save();
 	//render stacks index page
@@ -124,7 +115,9 @@ async function deleteBook(req, res) {
 	//find current stack
 	const stack = await Stack.findById(req.params.id);
 	//find index of book that will be deleted
-	const idx = stack.books.findIndex((book) => book === req.params.bookId);
+	const idx = stack.books.findIndex(
+		(book) => book.toString() === req.params.bookId
+	);
 	//remove book from stack's book array
 	stack.books.splice(idx, 1);
 	//save stack via Mongoose
