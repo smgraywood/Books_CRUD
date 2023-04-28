@@ -70,6 +70,7 @@ async function updateBook(req, res) {
 	book.genre = req.body.genre;
 	book.rating = req.body.rating;
 	book.review = req.body.review;
+	book.favoriteQuote = req.body.favoriteQuote;
 	//save book via Mongoose
 	await book.save();
 	//render updated book's show page
