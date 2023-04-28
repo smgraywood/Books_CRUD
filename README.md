@@ -120,5 +120,6 @@ Don't forget to give the project a star! Thanks again!
 - [ ] Search feature for the books list allowing users to search by genre, author, and title
 - [ ] fill the books database via an api and then let users customize the information in each book
 - [ ] implement a social media aspect where users could see eachothers stacks and share books
+- [ ] create a paid tier that allows users to have unlimited stacks
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
